@@ -8,8 +8,9 @@ https://aviv-jessie.itch.io/assignment2-prefabs-triggers-c
 
 
 # Changes:
-TODO add Changes
-TakeTheBall.cs
+Assets\Scripts\KeyboardMoverWASD
+Assets\Scripts\KeyboardSpawner
+Assets\Scripts\TakeThaBall
 
 ## Credits
 ### Assignment solver
