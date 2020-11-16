@@ -9,26 +9,32 @@ public class TakeTheBall : MonoBehaviour {
     [Tooltip("key to press")]
     [SerializeField] protected KeyCode keyToPress;
 
-    const float timeToWait = 0.1f;
+    const float timeToWait = 0.0f;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        var keyboardSpawnerComponent = other.GetComponent<KeyboardSpawner>();
+        var showBall = this.GetComponent<SpriteRenderer>();
         if (other.tag == triggeringTag) {           
-            var keyboardSpawnerComponent = other.GetComponent<KeyboardSpawner>();
+            showBall.enabled = false;
             if (keyboardSpawnerComponent) {
-                keyboardSpawnerComponent.StartCoroutine(ShieldTemporarily(keyboardSpawnerComponent));
+                keyboardSpawnerComponent.StartCoroutine(BallTemporarily(keyboardSpawnerComponent, showBall));
             }
         } else {
             Debug.Log("doesn't have KeyboardSpawner "+other.name);
         }
     }
-    private IEnumerator ShieldTemporarily(KeyboardSpawner keyboardSpawnerComponent) {
+
+
+    private IEnumerator BallTemporarily(KeyboardSpawner keyboardSpawnerComponent, SpriteRenderer showBall){
         keyboardSpawnerComponent.enabled = true;
         bool thrown = false;
-        while (!thrown) {            
-            if(Input.GetKeyDown(keyToPress))
+        while (!thrown) {
+            showBall.enabled = true;
+            if (Input.GetKeyDown(keyToPress)){
                 thrown = true;
+                keyboardSpawnerComponent.enabled = false;
+            }
             yield return new WaitForSeconds(timeToWait);
         }     
-        keyboardSpawnerComponent.enabled = false;
     }
 }
