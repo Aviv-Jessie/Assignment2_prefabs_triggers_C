@@ -1,6 +1,7 @@
 Hello, Welcome to our games!
 
-We are learning PC-Game development, and our assignments its to make changes in spaceship game.
+ We are learning PC-Game development, and our assignments its to make changes in spaceship game.
+
 We made another changes every section, in this section, we changed the walls attributes and collisions:
 
 the game:
@@ -8,9 +9,9 @@ https://aviv-jessie.itch.io/assignment2-prefabs-triggers-c
 
 
 # Changes:
-Assets\Scripts\KeyboardMoverWASD
-Assets\Scripts\KeyboardSpawner
-Assets\Scripts\TakeThaBall
+* Assets\Scripts\KeyboardMoverWASD
+* Assets\Scripts\KeyboardSpawner
+* Assets\Scripts\TakeThaBall
 
 ## Credits
 ### Assignment solver
