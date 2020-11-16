@@ -4,7 +4,7 @@ We are learning PC-Game development, and our assignments its to make changes in 
 We made another changes every section, in this section, we changed the walls attributes and collisions:
 
 the game:
-https://aviv-jessie.itch.io/assignment2-prefabs-triggers-b-1
+https://aviv-jessie.itch.io/assignment2-prefabs-triggers-c
 
 
 # Changes:
