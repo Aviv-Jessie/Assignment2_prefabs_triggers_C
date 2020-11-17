@@ -20,9 +20,9 @@ public class TakeTheBall : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {        
         var keyboardSpawnerComponent = other.GetComponent<KeyboardSpawner>();        
         var show = other.GetComponent<SpriteRenderer>();
-        show.sprite = spriteWithBall;
-
+        
         if (other.tag == triggeringTag) {           
+            show.sprite = spriteWithBall;
             transform.position = positionOutsideTheCamera;                        
             if (keyboardSpawnerComponent) {
                 keyboardSpawnerComponent.StartCoroutine(BallTemporarily(keyboardSpawnerComponent,show));
