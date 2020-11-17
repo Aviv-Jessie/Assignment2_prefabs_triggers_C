@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5507618341651535258}
   - component: {fileID: 5507618341651535257}
   - component: {fileID: -1617657026796708482}
+  - component: {fileID: 726563263122744963}
   - component: {fileID: 6442575248839953906}
   - component: {fileID: -1614384624013428215}
-  - component: {fileID: 726563263122744963}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -113,6 +113,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggeringTag: Player
   destroyMySelf: 1
+--- !u!114 &726563263122744963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507618341651535256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df581e8680519ae419c7c78876da0f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggeringTag: thrower
+  keyToPress: 32
+  positionOutsideTheCamera: {x: -10, y: 10, z: 0}
+  spriteWithBall: {fileID: 21300000, guid: 28b59aba27f1dab4bacfa65326060198, type: 3}
+  spriteWithOutBall: {fileID: 21300000, guid: 747df3d4a07ff12498a6cfd99cc5a7e3, type: 3}
 --- !u!58 &6442575248839953906
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,17 +167,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &726563263122744963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507618341651535256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df581e8680519ae419c7c78876da0f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggeringTag: thrower
-  keyToPress: 32
